@@ -6,6 +6,13 @@ public class BankAccount {
     private String email;
     private String phone;
 
+    public BankAccount(String accountNumber,int balance, String name,String email,String phone){
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
     public String getAccountNumber() {
         return accountNumber;
     }
