@@ -13,6 +13,7 @@ public class Order {
         this.drink = drink;
         this.sideItem = sideItem;
 
+
     }
     public void changeDrinkSize(){
         System.out.println("With what size to replace your drink?");
@@ -54,7 +55,6 @@ class Burger {
     public Burger(String type, double price) {
         this.type = type;
         this.price = price;
-        addToppings();
     }
 
 

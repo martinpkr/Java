@@ -7,10 +7,11 @@ public class Main {
         SideItem fries = new SideItem("french fries",3.29);
 //        Order basicOrder = new Order();
         Order bigMacOrder = new Order(new Burger("Big-Mac",4.99),new Drink("Pepsi","small",2.99),new SideItem("fallafel",0.50));
-
+        Order deluxe = new Order(new DeluxeBurger(),new Drink("Coke","big",10),new SideItem("Onion rings",15));
 //        bigMacOrder.printItems();
 //        bigMacOrder.changeDrinkSize();
-        bigMacOrder.printItems();
-        bigMacOrder.totalAmount();
+//        bigMacOrder.printItems();
+//        bigMacOrder.totalAmount();
+        deluxe.totalAmount();
     }
 }
