@@ -11,7 +11,9 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(100);
         }
+
         Arrays.sort(array);
+
         int[] descendingArray = new int[20];
         int count = 0;
         for (int i = array.length - 1; i >= 0; i--) {
