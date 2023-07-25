@@ -23,6 +23,7 @@ public class Main {
         var iterator = linkedList.listIterator();
         promptUser(true,linkedList,iterator);
 
+
     }
     public static void moveForward(ListIterator<Place> iterator){
 
