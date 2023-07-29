@@ -37,6 +37,8 @@ public class Voina {
         return players;
     }
     public void inGame(List<Player> players){
+        Player bestPlayer = null;
+        Card bestCard = null;
         List<Card> cardsPlayed = new ArrayList<>();
         for (Player player:
              players) {
@@ -47,15 +49,33 @@ public class Voina {
                 return;
             }else{
                 Card card = player.playCard();
+                boolean isDuplicateRank = false;
+                for (Card c : cardsPlayed) {
+                    if (c.getRank() == card.getRank()) {
+                        isDuplicateRank = true;
+                        break;
+                    }
+                }
                 cardsPlayed.add(card);
+
+                if (bestCard == null || card.getRank() > bestCard.getRank()) {
+                    bestCard = card;
+                    bestPlayer = player; // Update the bestPlayer to the current player
+                }
+                if(isDuplicateRank){
+                    System.out.println("Voina");
+                }
             }
 
         }
         System.out.println("This hand is done!");
         Collections.sort(cardsPlayed,Comparator.comparing(Card::getRank).reversed());
         System.out.println(cardsPlayed);
-        Card bestCard = cardsPlayed.get(0);
-        System.out.println("The best played cards was" + bestCard);
+
+        int bestCardIndex = cardsPlayed.indexOf(bestCard);
+
+        // Retrieve the corresponding player from the players list
+        System.out.println("The best played cards was" + bestCard + "this hand goes to -->" + bestPlayer.name());
     }
     public static Comparator<Card> RANK = new Comparator<Card>() {
         @Override

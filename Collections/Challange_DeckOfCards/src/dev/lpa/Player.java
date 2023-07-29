@@ -23,4 +23,9 @@ public record Player(List<Card> playerDeck, String name){
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    @Override
+    public String name() {
+        return name;
+    }
 }

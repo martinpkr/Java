@@ -58,12 +58,7 @@ public class Card {
     public static void printDeck(List<Card> deck){
         printDeck(deck,"Current Deck",4);
     }
-
-    public int getRank() {
-        return rank;
-    }
-
-    public static void printDeck(List<Card> deck, String description, int rows){
+    public static void printDeck(List<Card> deck,String description,int rows){
         if(description != null){
             System.out.println(description);
         }
@@ -79,6 +74,11 @@ public class Card {
         }
 
     }
+
+    public int getRank() {
+        return rank;
+    }
+
     @Override
     public String toString() {
         return switch (suit){
@@ -90,5 +90,6 @@ public class Card {
 
 
     }
+
 }
 
