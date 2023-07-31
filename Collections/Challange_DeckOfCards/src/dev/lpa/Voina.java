@@ -40,11 +40,13 @@ public class Voina {
         Player bestPlayer = null;
         Card bestCard = null;
         List<Card> cardsPlayed = new ArrayList<>();
+
         for (Player player:
              players) {
             Scanner scanner = new Scanner(System.in);
             System.out.println(player.name() + " is playing a card, click ENTER to see the card");
             String input = scanner.nextLine();
+
             if(input.equalsIgnoreCase("Q")){
                 return;
             }else{
@@ -53,6 +55,9 @@ public class Voina {
                 for (Card c : cardsPlayed) {
                     if (c.getRank() == card.getRank()) {
                         isDuplicateRank = true;
+                        Player playerInWar2 = getPlayerByName(players,"player"+ cardsPlayed.indexOf(c));
+                        System.out.println("Voina between: " + player.name() + " and player:" + playerInWar2.name());
+                        War.whoWinsWar(player,playerInWar2);
                         break;
                     }
                 }
@@ -61,9 +66,6 @@ public class Voina {
                 if (bestCard == null || card.getRank() > bestCard.getRank()) {
                     bestCard = card;
                     bestPlayer = player; // Update the bestPlayer to the current player
-                }
-                if(isDuplicateRank){
-                    System.out.println("Voina");
                 }
             }
 
@@ -76,6 +78,16 @@ public class Voina {
 
         // Retrieve the corresponding player from the players list
         System.out.println("The best played cards was" + bestCard + "this hand goes to -->" + bestPlayer.name());
+    }
+
+    public static Player getPlayerByName(List<Player> players,String targetName){
+        for (Player player:
+             players) {
+            if(player.name().equals(targetName)){
+                return player;
+            }
+        }
+        return null;
     }
     public static Comparator<Card> RANK = new Comparator<Card>() {
         @Override
