@@ -50,6 +50,7 @@ public class War {
                     firstThree) {
                 System.out.println(card + ", ");
             }
+
             System.out.println("End of war -----------------------------------");
         }else{
             System.out.println("Tie");
