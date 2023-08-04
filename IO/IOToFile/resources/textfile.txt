@@ -1,0 +1,1 @@
+how much words are in this file ? output the count in a different file! ok so lets continue with the challange, the words will be seperated with " " or with ", "

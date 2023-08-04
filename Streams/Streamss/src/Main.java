@@ -22,7 +22,7 @@ public class Main {
         var StreamStrings = strings.filter(s -> s.charAt(0) == 'T')
                 .map(s -> s.toUpperCase())
                 .sorted(Comparator.naturalOrder())
-                
+
 
         Stream.concat(StreamStrings,listStream).forEach(System.out::println);
 
