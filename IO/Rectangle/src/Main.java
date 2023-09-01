@@ -6,5 +6,10 @@ public class Main {
         rectangle.printPerimeter();
         Rectangle rectangle1 = new Rectangle();
         rectangle1.printArea();
+        rectangle1.printFigure();
+        Square square = new Square(4,4);
+        square.printFigure();
+        square.printArea();
+
     }
 }

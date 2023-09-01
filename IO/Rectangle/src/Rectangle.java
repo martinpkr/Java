@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle extends Figure {
     private double width;
     private double height;
 
@@ -15,6 +15,12 @@ public class Rectangle {
     public void printArea() {
         System.out.println(width + height);
     }
+
+    @Override
+    void printParameter() {
+
+    }
+
     public void printPerimeter() {
         System.out.println(width * height);
     }
@@ -33,5 +39,15 @@ public class Rectangle {
 
     public void setHeight(double height) {
         this.height = height;
+    }
+
+    @Override
+    void printArea(double width, double height) {
+
+    }
+
+    @Override
+    void printParameter(double width, double height) {
+
     }
 }
