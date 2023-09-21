@@ -13,7 +13,7 @@ public class Main {
         hourlyEmployee1.collectPay();
         hourlyEmployee1.getAge();
         System.out.println(hourlyEmployee1);
-        Employee employee2 = new Employee("Kolio","22/01/1993","21/02/2029","10/06/2022");
+        Employee employee2 = new Employee("Kolio", "22/01/1993", "21/02/2029", "10/06/2022");
         System.out.println(employee2);
 
     }

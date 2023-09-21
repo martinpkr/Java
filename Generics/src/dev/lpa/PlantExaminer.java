@@ -8,9 +8,9 @@ public class PlantExaminer<T> {
         this.plant = plant;
     }
 
-    public void examine(){
+    public void examine() {
         System.out.println(plant.getClass().getSimpleName() + plant);
-        if(plant instanceof Rose rose){
+        if (plant instanceof Rose rose) {
             rose.printSmell();
         }
     }

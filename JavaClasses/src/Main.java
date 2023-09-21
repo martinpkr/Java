@@ -13,12 +13,12 @@ public class Main {
 //
 //        myBankAcc.withdraw(263);
 
-        Customer john = new Customer("Dimitrina",500000,"rich@abv.bg");
+        Customer john = new Customer("Dimitrina", 500000, "rich@abv.bg");
         System.out.println(john.getName());
         System.out.println(john.getCreditLimit());
 
         System.out.println(john);
-        Point point = new Point(6,2);
+        Point point = new Point(6, 2);
         System.out.println(point.distance());
 
     }

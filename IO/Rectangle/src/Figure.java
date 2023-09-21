@@ -1,9 +1,10 @@
 public abstract class Figure {
 
     abstract void printArea();
+
     abstract void printParameter();
 
-    public void printFigure(){
+    public void printFigure() {
         System.out.println(this.getClass().getSimpleName());
     }
 

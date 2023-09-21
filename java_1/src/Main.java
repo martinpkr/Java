@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,7 +9,7 @@ public class Main {
         List<Integer> list = new ArrayList<>();
         Random rand = new Random();
         list.add(10);
-        for (int i = 0; i < 100;i++){
+        for (int i = 0; i < 100; i++) {
 
             list.add(rand.nextInt(2000));
 
@@ -20,23 +23,23 @@ public class Main {
 
         list.sort(comparator);
 
-        if((list.size() / 2) % 2 == 0){
+        if ((list.size() / 2) % 2 == 0) {
 
             int middle = list.size() / 2;
 
-            if (list.indexOf(middle) == number){
+            if (list.indexOf(middle) == number) {
                 System.out.println("found number: " + number);
             }
             int target = 0;
             int iterations = 0;
-            while(target != number){
+            while (target != number) {
                 iterations += 1;
-                if(list.get(list.size() / 2) == number){
+                if (list.get(list.size() / 2) == number) {
                     System.out.println("Number found: " + number + " after " + iterations + " loops");
                     target = number;
                     return;
                 }
-                list = list.subList(0,list.size() / 2);
+                list = list.subList(0, list.size() / 2);
                 System.out.println(list);
 
             }

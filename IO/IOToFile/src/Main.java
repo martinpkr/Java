@@ -11,21 +11,21 @@ public class Main {
         File file = new File("resources/textfile.txt");
         int counter = 0;
         try (Scanner scanner = new Scanner(new FileReader(file))) {
-            while (scanner.hasNext()){
+            while (scanner.hasNext()) {
 
                 int chars = scanner.next().length();
                 counter += count(chars);
             }
         }
         FileWriter writer = null;
-        try{
+        try {
             writer = new FileWriter("resources/countfile.txt");
             writer.append(Integer.toString(counter));
 
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e);
             e.printStackTrace();
-        }finally {
+        } finally {
             if (writer != null) {
                 writer.close();
             }
@@ -33,7 +33,7 @@ public class Main {
     }
 
 
-    public static int count(int n){
+    public static int count(int n) {
         return n + 1;
     }
 

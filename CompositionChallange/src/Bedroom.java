@@ -14,7 +14,8 @@ public class Bedroom {
         this.ceiling = ceiling;
         this.bed = bed;
     }
-    public void makeBed(){
+
+    public void makeBed() {
         System.out.println("The bed is being made");
         bed.make();
     }

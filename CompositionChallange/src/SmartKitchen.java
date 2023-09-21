@@ -3,7 +3,7 @@ public class SmartKitchen {
     private DishWasher dishWasher;
     private CoffeeMaker brewMaster;
 
-    public SmartKitchen(){
+    public SmartKitchen() {
         brewMaster = new CoffeeMaker();
         dishWasher = new DishWasher();
         iceBox = new Refrigerator();
@@ -22,42 +22,44 @@ public class SmartKitchen {
     }
 }
 
-class CoffeeMaker{
+class CoffeeMaker {
     private boolean hasWorkToDo;
 
     public void setHasWorkToDo(boolean hasWorkToDo) {
         this.hasWorkToDo = hasWorkToDo;
     }
 
-    public void brewCoffee(){
+    public void brewCoffee() {
         if (hasWorkToDo) {
             System.out.println("Brewing Coffee");
             hasWorkToDo = false;
         }
     }
 }
-class Refrigerator{
+
+class Refrigerator {
     private boolean hasWorkToDo;
 
     public void setHasWorkToDo(boolean hasWorkToDo) {
         this.hasWorkToDo = hasWorkToDo;
     }
 
-    public void orderFood(){
+    public void orderFood() {
         if (hasWorkToDo) {
             System.out.println("Ordering food");
             hasWorkToDo = false;
         }
     }
 }
-class DishWasher{
+
+class DishWasher {
     private boolean hasWorkToDo;
 
     public void setHasWorkToDo(boolean hasWorkToDo) {
         this.hasWorkToDo = hasWorkToDo;
     }
 
-    public void doDishes(){
+    public void doDishes() {
         if (hasWorkToDo) {
             System.out.println("Doing Dishes");
             hasWorkToDo = false;

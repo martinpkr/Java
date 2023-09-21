@@ -2,7 +2,7 @@ public class Dog extends Animal {
     private String tailType;
     private String earType;
 
-    public Dog(){
+    public Dog() {
         super("Terier", "Big", 23);
     }
 
@@ -12,14 +12,14 @@ public class Dog extends Animal {
         this.earType = earType;
     }
 
-    public void windTail(){
+    public void windTail() {
         System.out.println(type + "doge " + tailType + " with " + earType + " tail is happy");
     }
 
     @Override
     public void move(String speed) {
         super.move(speed);
-        if(speed == "fast"){
+        if (speed == "fast") {
             tailType = "Swinger";
             windTail();
         }

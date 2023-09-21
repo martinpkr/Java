@@ -16,8 +16,8 @@ public class Main {
 
         seed += 15;
         var streamI = Stream.iterate(seed, i -> i + 1)
-                        .limit(15)
-                                .map(i -> "I" + i);
+                .limit(15)
+                .map(i -> "I" + i);
 
         seed += 15;
         int nSeed = seed;
@@ -27,20 +27,20 @@ public class Main {
 
         seed += 15;
         var streamG = Stream.of("G46", "G47", "G48", "G49", "G50",
-        "G51", "G52", "G53", "G54", "G55", "G56", "G57", "G58", "G59", "G60");
+                "G51", "G52", "G53", "G54", "G55", "G56", "G57", "G58", "G59", "G60");
 
         seed += 15;
         int rSeed = seed;
 
         var streamO = Stream.generate(Main::getCounter)
-                        .limit(15)
-                                .map(i -> "O" + (rSeed + i));
+                .limit(15)
+                .map(i -> "O" + (rSeed + i));
 
         var streamBI = Stream.concat(streamB, streamI);
         var streamNG = Stream.concat(streamN, streamG);
         var streamBING = Stream.concat(streamBI, streamNG);
         Stream.concat(streamBING, streamO)
-                        .forEach(System.out::println);
+                .forEach(System.out::println);
 
         System.out.println("-------------------------------------");
         Stream.generate(() -> new Random().nextInt(rSeed, rSeed + 15))

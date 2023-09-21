@@ -5,16 +5,18 @@ public class Bed {
     private int sheets;
     private int quilt;
 
-    public Bed(String style,int pillows,int height,int sheets, int quilt){
+    public Bed(String style, int pillows, int height, int sheets, int quilt) {
         this.style = style;
         this.pillows = pillows;
         this.height = height;
         this.sheets = sheets;
         this.quilt = quilt;
     }
-    public void make(){
+
+    public void make() {
         System.out.println("Good night!");
     }
+
     public String getStyle() {
         return style;
     }

@@ -1,6 +1,6 @@
 package dev.lpa;
 
-public class Earth extends Planet{
+public class Earth extends Planet {
 
     private long population;
     private Living living;
@@ -11,7 +11,7 @@ public class Earth extends Planet{
         this.living = living;
     }
 
-    public void printPopulation(){
+    public void printPopulation() {
         System.out.println("population of earth currently is " + population + " and it's still growing");
     }
 

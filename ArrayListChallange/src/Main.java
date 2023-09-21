@@ -7,22 +7,22 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-    ArrayList<String> groceryList = new ArrayList<String>();
-    groceryList.add("bananas");
-    groceryList.add("grapes");
-    groceryList.add("apples");
+        ArrayList<String> groceryList = new ArrayList<String>();
+        groceryList.add("bananas");
+        groceryList.add("grapes");
+        groceryList.add("apples");
 
-    promptUser(groceryList);
+        promptUser(groceryList);
 
 
     }
 
-    public static void promptUser(ArrayList<String> groceryList){
+    public static void promptUser(ArrayList<String> groceryList) {
         System.out.println("Type 0 to exit the program, 1 to add items and 2 to delete items");
         Scanner s = new Scanner(System.in);
         String choice = s.nextLine();
 
-        switch (choice){
+        switch (choice) {
             case "0" -> {
                 System.out.println("Quit program!");
                 System.out.println(groceryList);

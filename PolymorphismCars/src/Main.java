@@ -5,8 +5,8 @@ public class Main {
 //        HybridCar hybridCar = (HybridCar) Car.getCar("Hybrid","a very fast hybrid car",
 //                2,8,12,30);
 //        hybridCar.drive();
-        ElectricCar electicCar = (ElectricCar) Car.getCar("Electirc","verry cool electric car",
-                22,22,22,200);
+        ElectricCar electicCar = (ElectricCar) Car.getCar("Electirc", "verry cool electric car",
+                22, 22, 22, 200);
         electicCar.drive();
     }
 }

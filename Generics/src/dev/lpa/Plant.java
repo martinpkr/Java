@@ -14,14 +14,15 @@ public class Plant {
 
 }
 
-class Lavander extends Plant{
+class Lavander extends Plant {
     private String smell;
+
     public Lavander(String name, String color, boolean poison) {
         super(name, color, poison);
 
     }
 
-    public void printSmell(){
-        System.out.println(this.getClass().getSimpleName() + "smells: " + smell );
+    public void printSmell() {
+        System.out.println(this.getClass().getSimpleName() + "smells: " + smell);
     }
 }

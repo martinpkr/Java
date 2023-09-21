@@ -25,15 +25,15 @@ public class ContactData {
             Daffy Duck, daffy@google.com
             """;
 
-    public static List<Contact> getData(String string){
+    public static List<Contact> getData(String string) {
         List<Contact> dataList = new ArrayList<>();
         Scanner s = new Scanner(string.equals("phone") ? PhoneData : EmailData);
-        while(s.hasNext()){
+        while (s.hasNext()) {
             String[] data = s.nextLine().split(",");
             Arrays.asList(data).replaceAll(String::trim);
-            if(string.equals("phone")){
+            if (string.equals("phone")) {
                 dataList.add(new Contact(data[0], Long.parseLong(data[1])));
-            }else if (string.equals("email")){
+            } else if (string.equals("email")) {
                 dataList.add(new Contact(data[0], data[1]));
             }
         }
