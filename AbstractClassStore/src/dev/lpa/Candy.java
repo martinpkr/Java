@@ -8,7 +8,7 @@ public class Candy extends ProductForSale {
 
     @Override
     public void showDetails() {
-        System.out.println(type + " " +type.getClass().getSimpleName() + " will cost you " +
+        System.out.println(type + " " + type.getClass().getSimpleName() + " will cost you " +
                 price + " they are " + description);
     }
 

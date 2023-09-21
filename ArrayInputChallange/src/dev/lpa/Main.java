@@ -20,7 +20,8 @@ public class Main {
         }
         System.out.println(findMin(newArray));
     }
-    public static int findMin(int... numberArray){
+
+    public static int findMin(int... numberArray) {
 
         Arrays.sort(numberArray);
         return numberArray[0];

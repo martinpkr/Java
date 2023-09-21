@@ -3,16 +3,15 @@ public class Animal {
     private String size;
     private double weight;
 
-    public Animal(){
+    public Animal() {
 
     }
+
     public Animal(String type, String size, double weight) {
         this.type = type;
         this.size = size;
         this.weight = weight;
     }
-
-
 
 
     @Override
@@ -23,10 +22,12 @@ public class Animal {
                 ", weight=" + weight +
                 '}';
     }
-    public void move(String speed){
+
+    public void move(String speed) {
         System.out.println(this.type + " moves " + speed);
     }
-    public void makeNoise(){
+
+    public void makeNoise() {
         System.out.println(this.type + " Makes noise");
     }
 }

@@ -1,8 +1,6 @@
 package dev.lpa;
 
-import java.awt.*;
-
-public class Building implements Mappable{
+public class Building implements Mappable {
 
     private String name;
     private String usage;

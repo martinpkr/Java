@@ -8,8 +8,8 @@ public class Printer {
         this.duplex = duplex;
     }
 
-    public int addToner(int tonerAmount){
-        if (tonerAmount + tonerLevel > 100){
+    public int addToner(int tonerAmount) {
+        if (tonerAmount + tonerLevel > 100) {
             return -1;
         }
         tonerLevel += tonerAmount;
@@ -19,13 +19,13 @@ public class Printer {
 
     }
 
-    public void printPages(int pages){
+    public void printPages(int pages) {
         pagesPrinted += pages;
-        if(duplex){
+        if (duplex) {
             System.out.println("The printer will use " + pages / 2 + " sheets of paper");
             System.out.println("using a duplex setting");
-        }else{
-            System.out.println("The printer will use " + pages  + " sheets of paper");
+        } else {
+            System.out.println("The printer will use " + pages + " sheets of paper");
 
         }
     }

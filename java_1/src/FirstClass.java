@@ -5,9 +5,9 @@ public class FirstClass {
         double result = (firstNumValue + secondNumValue) * 100.00d;
         double remainder = result % 40.00d;
         boolean IsZero = false;
-        if(remainder == 0) {
+        if (remainder == 0) {
             IsZero = true;
-        }else{
+        } else {
             System.out.println("Got some remainder");
         }
         System.out.println(remainder);

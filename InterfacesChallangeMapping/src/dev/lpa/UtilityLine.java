@@ -1,7 +1,5 @@
 package dev.lpa;
 
-import java.util.Map;
-
 public class UtilityLine implements Mappable {
 
     private String name;

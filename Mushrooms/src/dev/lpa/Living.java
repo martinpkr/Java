@@ -12,12 +12,12 @@ public class Living {
         this.plant = plant;
     }
 
-    public void whatIsLiving(){
+    public void whatIsLiving() {
         System.out.println("Living things on earth are:" + animal.getClass().getSimpleName() + " " + mushroom.getClass().getSimpleName() + " " + plant.getClass().getSimpleName());
     }
 }
 
-class Animal{
+class Animal {
     private String name;
     private int legs;
     private boolean extinct;
@@ -28,17 +28,18 @@ class Animal{
         this.extinct = extinct;
     }
 
-    public void checkIfItsBug(){
-        if (legs > 4){
+    public void checkIfItsBug() {
+        if (legs > 4) {
             System.out.println(name + "Is a bug!");
-        }else{
+        } else {
             System.out.println(name + "Is not a bug!");
         }
     }
 
 
 }
-class Mushroom{
+
+class Mushroom {
     private String name;
     private String color;
     private boolean poisonous;
@@ -49,28 +50,29 @@ class Mushroom{
         this.poisonous = poisonous;
     }
 
-
-    public void checkForPoison(){
-        if(name.contains("Agaricus")){
-            poisonous = false;
-            printPoison(poisonous);
-        }else if(name.contains("Amanita")){
-            poisonous = true;
-            printPoison(poisonous);
-        }else{
-            poisonous = false;
-        }
-    }
-    public static void printPoison(boolean isPoisonous){
-        if(isPoisonous){
+    public static void printPoison(boolean isPoisonous) {
+        if (isPoisonous) {
             System.out.println("This Mushroom is poisonous");
-        }else{
+        } else {
             System.out.println("This Mushroom is not poisonous");
         }
     }
 
+    public void checkForPoison() {
+        if (name.contains("Agaricus")) {
+            poisonous = false;
+            printPoison(poisonous);
+        } else if (name.contains("Amanita")) {
+            poisonous = true;
+            printPoison(poisonous);
+        } else {
+            poisonous = false;
+        }
+    }
+
 }
-class Plant{
+
+class Plant {
     private String name;
     private boolean isTree;
     private boolean poisonous;
@@ -80,7 +82,6 @@ class Plant{
         this.isTree = isTree;
         this.poisonous = poisonous;
     }
-
 
 
 }

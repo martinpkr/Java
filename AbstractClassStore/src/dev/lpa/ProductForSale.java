@@ -11,12 +11,14 @@ public abstract class ProductForSale {
         this.description = description;
     }
 
-    public double quantitySum(int quantity){
+    public double quantitySum(int quantity) {
         return quantity * price;
     }
-    public void printItem(int quantity){
-        System.out.println("You bought " + quantity + " of " + type  + " at cost: " + quantitySum(quantity));
+
+    public void printItem(int quantity) {
+        System.out.println("You bought " + quantity + " of " + type + " at cost: " + quantitySum(quantity));
     }
+
     public abstract void showDetails();
 
 }

@@ -11,15 +11,15 @@ public class Main {
 //        mysteryAnime.isPlaying();
         Scanner s = new Scanner(System.in);
 
-        while (true){
+        while (true) {
             System.out.print("What type of anime you want to watch?");
             String userType = s.nextLine();
-            if ("Qq".contains(userType)){
+            if ("Qq".contains(userType)) {
                 break;
             }
             System.out.print("Enter movie title: ");
             String userTitle = s.nextLine();
-            Anime anime = Anime.getAnime(userType,userTitle);
+            Anime anime = Anime.getAnime(userType, userTitle);
             anime.isPlaying();
         }
 

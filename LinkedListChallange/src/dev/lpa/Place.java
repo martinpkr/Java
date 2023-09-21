@@ -10,6 +10,10 @@ public class Place {
         this.distance = distance;
     }
 
+    public static Place getPlace(String name, int distance) {
+        return new Place(name, distance);
+    }
+
     public String getName() {
         return name;
     }
@@ -18,13 +22,9 @@ public class Place {
         return distance;
     }
 
-    public static Place getPlace(String name, int distance){
-        return new Place(name,distance);
-    }
-
     @Override
     public String toString() {
-        return  "name = " + name + '\'' + "\n" +
+        return "name = " + name + '\'' + "\n" +
                 "distance = " + distance
                 ;
     }

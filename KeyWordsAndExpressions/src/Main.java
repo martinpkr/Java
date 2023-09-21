@@ -9,7 +9,7 @@ public class Main {
         int levelCompleted = 8;
 
         int finalScore = score;
-        if(gameOver) {
+        if (gameOver) {
             finalScore += bonus * levelCompleted;
             System.out.println(finalScore);
         }

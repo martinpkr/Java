@@ -2,9 +2,6 @@ import dev.lpa.Card;
 import dev.lpa.Player;
 import dev.lpa.Voina;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -26,8 +23,8 @@ public class Main {
 //        List<Card> deck = Card.getStandardDeck();
 //        Card.printDeck(deck);
         List<Card> deck = Card.getStandardDeck();
-        Voina voina = new Voina(5,deck);
-        List<Player> players = voina.getPlayers(deck,5);
-        voina.getPlayers(deck,5);
+        Voina voina = new Voina(5, deck);
+        List<Player> players = voina.getPlayers(deck, 5);
+        voina.getPlayers(deck, 5);
     }
 }

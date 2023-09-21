@@ -1,4 +1,4 @@
-public class Square extends Figure{
+public class Square extends Figure {
     private double width;
     private double height;
 

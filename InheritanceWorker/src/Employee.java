@@ -1,8 +1,8 @@
-public class Employee extends Worker{
+public class Employee extends Worker {
+    private static int employeeNo = 1;
     private long employeeId;
     private String hireDate;
 
-    private static int employeeNo = 1;
     public Employee(String name, String birthDay, String endDate, String hireDate) {
         super(name, birthDay, endDate);
         this.employeeId = Employee.employeeNo++;
@@ -20,7 +20,7 @@ public class Employee extends Worker{
     }
 }
 
-class HourlyEmployee extends Employee{
+class HourlyEmployee extends Employee {
     private double hourlyPayRate;
 
     public HourlyEmployee(String name, String birthDay, String endDate, long employeeId, String hireDate, double hourlyPayRate) {
@@ -28,7 +28,7 @@ class HourlyEmployee extends Employee{
         this.hourlyPayRate = hourlyPayRate;
     }
 
-    public void getDoublePay(){
+    public void getDoublePay() {
         double doublePay = hourlyPayRate * 2;
         System.out.println(name + "is getting paid double the amount of: " + hourlyPayRate + "that equals to: " + doublePay);
     }

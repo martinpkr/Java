@@ -2,8 +2,6 @@ package dev.lpa;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
 
 public class Album {
     // write code here
